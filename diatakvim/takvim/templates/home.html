@@ -1,0 +1,533 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://www.dia.com.tr/favicon.png" type="image/png"/>
+</head>
+<nav class="navbar sticky-top" style="background-color:#1d3c76">
+  <div class="container-fluid">
+      <a href=" "><img data-toggle="tooltip" src="https://www.dia.com.tr/wp-content/uploads/dia.png" width="75" height="75" title="DİA Yazılım"></a>
+      <h1 class="text" style="color:white">DİA YAZILIM SAN. TİC. A.Ş.</h1>
+      <a href="/admin" target="_blank"><button data-toggle="tooltip" title="Admin Sayfası" class="btn btn-outline-light btn-lg">ADMİN</button></a>
+
+  </div>
+</nav>
+
+<div class="container-xxl">
+<div class="row">
+<div class="col mt-5" style="margin-right:50px; margin-left:-200px;">
+
+<iframe src="https://calendar.google.com/calendar/embed?height=420&wkst=2&bgcolor=%233F51B5&ctz=Europe%2FIstanbul&showTz=1&mode=WEEK&src=dGdmZmY4cGJyaXVwam02aGozNW5yYzBpaDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=dHIudHVya2lzaCNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%234285F4&color=%237986CB" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no">
+</iframe> <!-- iframe tagi içerisindeki takvim linki geçersiz olabilir. Google hesabınızla calendardan kendinize özel link alabilirsiniz -->
+</div>
+
+<div class="col" style="margin-top:47px; margin-right:-300px;">
+    <div class="row" style="padding-top:100px;">
+        <div class="col">
+            <div class="cardticket bg-c-blue order-card">
+                <div class="card-block text-center">
+                    <h4 class="text-center">HAFTALIK ÇÖZÜLEN BİLET</h4>
+                    <hr>
+                    <h2 class="timer count-title count-number"><h2 class="count1" data-from= "0" data-to= "50" data-time="3000"></h2>
+                    <hr>
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="cardticket bg-c-green order-card">
+                <div class="card-block text-center">
+                    <h4 class="text">AYLIK ÇÖZÜLEN BİLET</h4>
+                    <hr>
+                    <h2 class="timer count-title count-number"><h2 class="count2" data-from= "0" data-to= "350" data-time="3000"></h2>
+                    <hr>
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+            </div>
+        </div>
+        <div class="w-100"></div>
+
+        <div class="col">
+            <div class="cardticket bg-c-yellow order-card">
+                <div class="card-block text-center">
+                    <h4 class="text">YILLIK ÇÖZÜLEN BİLET</h4>
+                    <hr>
+                    <h2 class="timer count-title count-number"><h2 class="count3" data-from= "0" data-to= "2500" data-time="3000"></h2>
+                    <hr>
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="cardticket bg-c-pink order-card">
+                <div class="card-block text-center">
+                    <h4 class="text">VERSİYONA KALAN BİLET</h4>
+                    <hr>
+                    <h2 class="timer count-title count-number"><h2 class="count4" data-from= "0" data-to= "30" data-time="3000"></h2>
+                    <hr>
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+</div>
+
+    <div class="row" style="margin-top:5%; margin-bottom:20%">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="panel panel-dark panel-colorful">
+                <div class="panel-body text-center">
+                	<p class="text-uppercase mar-btm text">Versiyon Tarihi</p>
+                	<i class="fa-solid fa-calendar-days fa-3x fa-shake" style="--fa-flip-x: 0; --fa-flip-y: 1;" ></i>
+                	<hr>
+                	<p class="h1 text">{{versiyon_tarihi}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-danger panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text">Stagıng</p>
+        			<i class="fa-solid fa-code-branch fa-3x fa-bounce" style="--fa-bounce-height:-15px;"></i>
+        			<hr>
+        			<p class="h1 text">{{staging_tarihi}}</p>
+        		</div>
+        	</div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-primary panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text">Yeni Versiyona Kalan Gün</p>
+        			<i class="fa-solid fa-clock-rotate-left fa-3x fa-beat-fade"></i>
+        			<hr>
+        			<p class="h1 text">{{versiyon_kalan_sure}}</p>
+        		</div>
+        	</div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-info panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text">Çalışılan Versiyon</p>
+        			<i class="fa-solid fa-code fa-3x fa-flip" style="--fa-animation-duration: 2s;" ></i>
+        			<hr>
+        			<p class="h1 text">{{versiyon_adi}}</p>
+        		</div>
+        	</div>
+        </div>
+	</div>
+</div>
+
+
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'css/mycss.css' %}">
+    <script src="https://kit.fontawesome.com/2c03f9f9f1.js" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Dia Yazılım İş Takvimi</title>
+    <!--<style>
+        th,td{
+        border: 1px black solid;
+        }
+    </style> --->
+
+</head>
+<body>
+<!-- <table>                          bu kısım veritabanındaki bütün bilgileri tablo
+     <tr>                             halinde göstermek içindir kullanmak için yorum satırını kaldırınız.
+         <th>Ticket ID</th>
+         <th>İş Tipi</th>
+         <th>Durum</th>
+         <th>Öncelik</th>
+         <th>Atanan</th>
+         <th>Hedef Sürüm</th>
+         <th>Kalan Zaman</th>
+     </tr>
+     {% for worklist in workall %}
+ <tr>
+     <td>{{worklist.ticketid}}</td>
+     <td>{{worklist.iş_tipi}}</td>
+     <td>{{worklist.durum}}</td>
+     <td>{{worklist.öncelik}}</td>
+     <td>{{worklist.atanan}}</td>
+     <td>{{worklist.hedef_sürüm}}</td>
+     <td>{{worklist.kalan_zaman}}</td>
+ </tr>
+     {% endfor %}
+</table>
+---------->
+
+<!---<div class="d-flex justify-content-start">
+
+    <div class="table-responsive" style="height: 247px; overflow-x: hidden; overflow-y: scroll;">
+        <table class="table">
+            <tr>
+                <th>Merge Edilecek</th>
+            </tr>
+            <tr>
+                <td><strong>Ticket Sayısı: {{mergedsayisi}}</strong></td>
+            </tr>
+            <tr>
+                {% for worklist in merged %}
+                <td>{{worklist.ticketid}}</td>
+            </tr>
+                {% endfor %}
+        </table>
+    </div>
+
+    <div class="table-responsive" style="height: 247px; overflow-x: hidden; overflow-y: scroll;">
+        <table class="table" style="">
+            <tr>
+                <th>Geliştiriliyor</th>
+            </tr>
+            <tr>
+                <td><strong>Ticket Sayısı: {{devolopingsayisi}}</strong></td>
+            </tr>
+            {% for worklist in devoloping %}
+            <tr>
+                <td>{{worklist.ticketid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="table-responsive" style="height: 247px; overflow-x: hidden; overflow-y: scroll;">
+        <table class="table">
+            <tr>
+                <th>Review</th>
+            </tr>
+            <tr>
+                <td><strong>Ticket Sayısı: {{reviewsayisi}}</strong></td>
+            </tr>
+            {% for worklist in review %}
+            <tr>
+                <td>{{worklist.ticketid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="table-responsive" style="height: 247px; overflow-x: hidden; overflow-y: scroll;">
+        <table class="table">
+            <tr>
+                <th>Testten Döndü</th>
+            </tr>
+            <tr>
+                <td><strong>Ticket Sayısı: {{testfinishsayisi}}</strong></td>
+            </tr>
+            {% for worklist in testfinish %}
+            <tr>
+                <td>{{worklist.ticketid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="table-responsive" style="height: 247px; overflow-x: hidden; overflow-y: scroll;">
+        <table class="table">
+            <tr style>
+                <th>Test Edilecek</th>
+            </tr>
+            <tr>
+                <td><strong>Ticket Sayısı: {{teststartsayisi}}</strong></td>
+            </tr>
+            {% for worklist in teststart %}
+            <tr>
+                <td>{{worklist.ticketid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="table-responsive" style="height: 247px; overflow-x: hidden; overflow-y: scroll;">
+        <table class="table">
+            <tr>
+                <th>Acil</th>
+            </tr>
+            <tr>
+                <td><strong>Ticket Sayısı: {{emergencysayisi}}</strong></td>
+            </tr>
+            {% for worklist in emergency %}
+            <tr>
+                <td>{{worklist.ticketid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div> --->
+
+
+</body>
+
+
+<!---<div class="container">
+    <div class="d-flex justify-content-start">
+
+<div class="row">
+  <div class="col-sm" style="background:orange; height: 247px; overflow-x: hidden; overflow-y: scroll;">
+    <h2>Merge Edilecek</h2>
+    <p>Ticket Sayısı: {{mergedsayisi}}</p>
+      <p>
+                {% for worklist in merged %}
+                <td>{{worklist.ticketid}}</td>
+            </p>
+                {% endfor %}
+  </div>
+
+  <div class="col-sm" style="background:yellow; height: 247px; overflow-x: hidden; overflow-y: scroll;">
+    <h2>Geliştiriliyor</h2>
+    <p>Ticket Sayısı: {{devolopingsayisi}}</p>
+      <p>
+          {% for worklist in devoloping %}
+          <td>{{worklist.ticketid}}</td>
+          </p>
+                {% endfor %}
+
+  </div>
+
+  <div class="col-sm" style="background:orange; height: 247px; overflow-x: hidden; overflow-y: scroll;">
+    <h2>Review</h2>
+    <p>Ticket Sayısı: {{reviewsayisi}}</p>
+      <p>
+          {% for worklist in review %}
+          <td>{{worklist.ticketid}}</td>
+          </p>
+                {% endfor %}
+  </div>
+
+</div>
+</div>
+</div> --->
+
+<!---<div class="container">
+    <div class="d-flex justify-content-start">
+
+<div class="row">
+
+  <div class="col-sm" style="background:yellow; height: 247px; overflow-x: hidden; overflow-y: scroll;">
+    <h2>Testten Döndü</h2>
+    <p>Ticket Sayısı: {{testfinishsayisi}}</p>
+      <p>
+          {% for worklist in testfinish %}
+          <td>{{worklist.ticketid}}</td>
+          </p>
+                {% endfor %}
+  </div>
+
+  <div class="col-sm" style="background:orange; height: 247px; overflow-x: hidden; overflow-y: scroll;">
+    <h2>Test Edilecek</h2>
+    <p>Ticket Sayısı: {{teststartsayisi}}</p>
+      <p>
+          {% for worklist in teststart %}
+          <td>{{worklist.ticketid}}</td>
+          </p>
+                {% endfor %}
+  </div>
+
+
+
+  <div class="col-sm" style="background:yellow; height: 247px; overflow-x: hidden; overflow-y: scroll;">
+    <h2>Acil</h2>
+    <p>Ticket Sayısı: {{emergencysayisi}}</p>
+      <p>
+          {% for worklist in emergency %}
+          <td>{{worklist.ticketid}}</td>
+          </p>
+                {% endfor %}
+  </div>
+
+</div>
+    </div>
+
+</div> ---->
+
+<body>
+<!--<div class="container" style="margin-top:5%; margin-bottom:10%">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="panel panel-dark panel-colorful">
+                <div class="panel-body text-center">
+                	<p class="text-uppercase mar-btm text">Versiyon Tarihi</p>
+                	<i class="fa-solid fa-calendar-days fa-3x fa-shake" style="--fa-flip-x: 0; --fa-flip-y: 1;" ></i>
+                	<hr>
+                	<p class="h1 text">{{versiyon_tarihi}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-danger panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text">Stagıng</p>
+        			<i class="fa-solid fa-code-branch fa-3x fa-bounce" style="--fa-bounce-height:-15px;"></i>
+        			<hr>
+        			<p class="h1 text">{{staging_tarihi}}</p>
+        		</div>
+        	</div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-primary panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text">Yeni Versiyona Kalan Gün</p>
+        			<i class="fa-solid fa-clock-rotate-left fa-3x fa-beat-fade"></i>
+        			<hr>
+        			<p class="h1 text">{{versiyon_kalan_sure}}</p>
+        		</div>
+        	</div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-info panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text">Çalışılan Versiyon</p>
+        			<i class="fa-solid fa-code fa-3x fa-flip" style="--fa-animation-duration: 2s;" ></i>
+        			<hr>
+        			<p class="h1 text">{{versiyon_adi}}</p>
+        		</div>
+        	</div>
+        </div>
+	</div>
+</div>   --->
+
+
+
+
+     <style>
+         .tablodiv {overflow: hidden;} .tablodiv:hover{overflow-y:scroll;}
+     </style>
+      <div class="my-5">
+      <div class="card-deck mx-4">
+        <div class="card">
+          <div class="item">
+            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2020/04/10/20/28/flasher-5027727__480.png" alt="Card image cap"> <!--  https://cdn.pixabay.com/photo/2020/04/10/20/28/flasher-5027727__480.png  -->
+          </div>
+          <div class="border-effect bg-danger"></div>
+          <div class="card-body tablodiv" style="height: 300px;">    <!---<div class="card-body" style="height: 300px; overflow-x: hidden; overflow-y: scroll;">   bu satır sürekli scroll görünmesi içindir--->
+            <h4 class="card-title">Acil</h4>
+            <p class="card-text text-danger">Bilet Sayısı: {{emergencysayisi}}</p>
+              <ul class="list-group">
+                {% for worklist in emergency %}
+          <li class="list-group-item">
+                <td>{{worklist.ticketid}} - {{worklist.atanan}}</td>
+            </li>
+                {% endfor %}
+            </ul>
+            <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --->
+          </div>
+        </div>
+        <div class="card">
+          <div class="item">
+            <img class="card-img-top" src="https://media2.giphy.com/media/YnS7j9pwnECXLMrI4t/giphy.gif?cid=790b761134d3cdd18b0245822115bdbb82578b99b3116822&rid=giphy.gif&ct=s" alt="Card image cap">
+          </div>
+          <div class="border-effect bg-success"></div>
+          <div class="card-body tablodiv" style="height: 300px;">   <!---<div class="card-body" style="height: 300px; overflow-x: hidden; overflow-y: scroll;">   bu satır sürekli scroll görünmesi içindir--->
+            <h4 class="card-title">Geliştiriliyor</h4>
+            <p class="card-text text-success">Bilet Sayısı: {{devolopingsayisi}}</p>
+      <ul class="list-group">
+          {% for worklist in devoloping %}
+         <li class="list-group-item">
+          <td>{{worklist.ticketid}} - {{worklist.atanan}}</td>
+          </li>
+                {% endfor %}
+      </ul>
+            <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+          </div>
+        </div>
+        <div class="card">
+          <div class="item">
+            <img class="card-img-top" src="https://i.giphy.com/media/cnicT4TsXdwqiyrbik/giphy.webp" alt="Card image cap">
+          </div>
+          <div class="border-effect bg-info"></div>
+          <div class="card-body tablodiv" style="height: 300px;">   <!---<div class="card-body" style="height: 300px; overflow-x: hidden; overflow-y: scroll;">   bu satır sürekli scroll görünmesi içindir--->
+            <h4 class="card-title">Review</h4>
+            <p class="card-text text-info">Bilet Sayısı: {{reviewsayisi}}</p>
+      <ul class="list-group">
+          {% for worklist in review %}
+         <li class="list-group-item">
+          <td>{{worklist.ticketid}} - {{worklist.atanan}}</td>
+          </li>
+                {% endfor %}
+      </ul>
+           <!--- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> --->
+          </div>
+        </div>
+        <div class="card">
+          <div class="item">
+            <img class="card-img-top" src="https://miro.medium.com/max/1280/1*TmiX7ATMCzxwdbmwEe6RXA.gif" alt="Card image cap">
+          </div>
+          <div class="border-effect bg-secondary"></div>
+          <div class="card-body tablodiv" style="height: 300px;">   <!---<div class="card-body" style="height: 300px; overflow-x: hidden; overflow-y: scroll;">   bu satır sürekli scroll görünmesi içindir--->
+            <h4 class="card-title">Testten Döndü</h4>
+            <p class="card-text text-secondary">Bilet Sayısı: {{testfinishsayisi}}</p>
+      <ul class="list-group">
+          {% for worklist in testfinish %}
+         <li class="list-group-item">
+          <td>{{worklist.ticketid}} - {{worklist.atanan}}</td>
+          </li>
+                {% endfor %}
+      </ul>
+            <!---<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+          <div class="card">
+          <div class="item">
+            <img class="card-img-top" src="https://i.giphy.com/media/f9k1tV7HyORcngKF8v/giphy.webp" alt="Card image cap">
+          </div>
+          <div class="border-effect bg-primary"></div>
+          <div class="card-body tablodiv" style="height: 300px;">   <!---<div class="card-body" style="height: 300px; overflow-x: hidden; overflow-y: scroll;">   bu satır sürekli scroll görünmesi içindir--->
+            <h4 class="card-title">Test Edilecek</h4>
+            <p class="card-text text-primary">Bilet Sayısı: {{teststartsayisi}}</p>
+      <ul class="list-group">
+          {% for worklist in teststart %}
+         <li class="list-group-item">
+          <td>{{worklist.ticketid}} - {{worklist.atanan}}</td>
+          </li>
+                {% endfor %}
+      </ul>
+            <!---<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+          <div class="card">
+          <div class="item">
+            <img class="card-img-top" src="https://i.giphy.com/media/11UhXwm8Ipd9C/giphy.webp" alt="Card image cap">
+          </div>
+          <div class="border-effect bg-warning"></div>
+          <div class="card-body tablodiv" style="height: 300px;">   <!---<div class="card-body" style="height: 300px; overflow-x: hidden; overflow-y: scroll;">   bu satır sürekli scroll görünmesi içindir--->
+            <h4 class="card-title">Merge Edilecek</h4>
+            <p class="card-text text-warning">Bilet Sayısı: {{mergedsayisi}}</p>
+      <ul class="list-group">
+          {% for worklist in merged %}
+         <li class="list-group-item">
+          <td>{{worklist.ticketid}} - {{worklist.atanan}}</td>
+          </li>
+                {% endfor %}
+      </ul>
+            <!---<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+
+<h6 style="text-align:center">
+    Copyright © <script>document.write(new Date().getFullYear())</script> <a href="https://www.dia.com.tr">DİA Yazılım</a>. Tüm hakları saklıdır. <!-- Ömer Ramazan Gökçe - QUIT' N EXIT - @quitnexit -->
+</h6>
+
+
+<script src ="{% static 'js/myjs.js' %}"></script>
+<script src ="{% static 'js/myjss.js' %}"></script>
+<script src ="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

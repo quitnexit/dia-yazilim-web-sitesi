@@ -1,0 +1,52 @@
+- Bu dosyada "diatakvim" isimli klasördeki web sitesinin nasıl çalıştığı anlatılmaktadır.
+
+- Öncelikle diatakvim ismindeki klasörümüzü çalıştıracağımız ide içerisinde açalım. Bu ide Pycharm, visiual studio olabilir.
+
+- İdenin terminalini (cmd) veya bilgisayarın terminalini açabiliriz. İdenin terminalini açmayı öneriyorum. Eğer ide terminali windows powershellse
+
+veya powershell kullanıyorsanız komutlarınızı ona göre girmelisiniz. Bu yazıda windows command prompt (cmd) için olan komutlar anlatılmaktadır.
+
+- İdenin terminalini açtıktan sonra öncelikle sanal ortamın aktif edilmesi gerekiyor. Bunun için "myenv" ismi verilen sanal ortam klasörünün içine cd komutu ile
+
+gidip tırnak işareti olmadan ".\Scripts\activate" komutunu çalıştırılmalıdır. Bundan sonra parantez içerisinde (myenv) sanal ortamın adı satır başında görünecektir.
+
+- Sanal ortamı aktif ettikten sonra cd komutu ile diatakvim klasörü içerisine geri dönülmelidir. Tekrar cd komutu ile takvim klasörüne girilmelidir.
+
+- Takvim klasörüne girdikten sonra "python manage.py runserver" ile proje çalıştırılabilir. Eğer eksik kurulumlardan dolayı hata mesajı alınıyorsa eksik programlar
+
+pip ile kurulabilir. 
+
+- Veritabanı ayarları takvim klasörü altındaki "settings.py" de bulunmaktadır. Settings.py dosyası içerisinde "DATABASES" kısmında PostgreSQL ayarları bulunmaktadır.
+
+Kendi veritabanı ayarlarınızı girebilirsiniz.
+
+- Web sitesi için olan html dosyası templates klasörü altında home.html dosyası içerisinde bulunmaktadır.
+
+- "googletakvim" klasörü içerisinde bulunan "models.py" dosyası içerisinde veritabanında bulunan kolon adları belirtilenerek veritabanına bir tablo oluşturulmuştur.
+
+- "googletakvim" klasörü içerisinde bulunan "views.py" dosyası içerisinde veritabanından hangi bilgilerin alınacağı ve gösterileceği yer almaktadır.
+
+- "versioncheck" klasörü içerisinde bulunan "models.py" dosyası içerisinde versiyon tarihlerini ve çalışılan versiyon bilgisini girmek için gerekli alanlar oluşturulmuştur.
+
+- Versiyon bilgileri açılan web sayfasının sonuna "/admin" ekleyerek admin sayfasına ulaşılarak veya site üzerinde sağ üstte bulunan admin butonuyla da gidilebilir.
+
+Gidilen admin sayfasında admin bilgileri istenecektir. Admin bilgileri terminal üzerinden "create superuser" komutuyla oluşturulabilir. Oluşturulan admin kullanıcı
+
+bilgileri ile admin sayfasına giriş yapılabilir ve mevcut kullanıcılar görüntülenebilir ve düzenlenebilir.
+
+- Admin sayfası üzerinde bulunan "versioncheck" menüsünden versiyon ismi, staging tarihi ve versiyon tarihi düzenlenebilir.
+
+- Web sitesiyle alakalı css ve js dosyaları "static" klasörü altında bulunan "css" ve "js" klasörlerinde bulunmaktadır. "css" klasörü altında bulunan "mycss.css" 
+
+ve "js" klasörü altında bulunan "myjs.js" ve "myjss.js" dosyaları gerekli ayarları içermektedir. Diğer css ve js dosyaları site tasarımında kullanılan bootstrap e 
+
+ait dosyalardır.
+
+
+- Daha fazla sorunuz için o.ramazangokce@gmail.com adresine mail atabilirsiniz veya
+
+İnstagram: @quitnexit   Discord: ÇAVUŞBENİM68 / Ramazan  [21]#2244      adreslerinden ulaşabilirsiniz.
+
+
+
+

@@ -1,0 +1,144 @@
+body{
+    color: #000000;
+    background: #eee;
+    position: relative;
+    height: 100%;
+    zoom: 67%
+}
+
+
+/* Burdan itibaren Dia merge edilecekler kart grubu için css ayarları*/
+
+.border-effect { height:15px;width:20%;margin-top: 2px; }
+
+   * {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+   }
+
+   .item {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+   }
+
+   .item img {
+     max-width: 100%;
+     -moz-transition: all 0.3s;
+     -webkit-transition: all 0.3s;
+     transition: all 0.3s;
+   }
+
+/* burdan itibaren staging kart grubu için css ayarları  */
+
+/*body{
+    background:#eee;
+    margin-top:20px;
+}*/
+
+.panel {
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 24px;
+}
+
+.panel-dark.panel-colorful {
+  background-color: #3b4146;
+  border-color: #3b4146;
+  color: #fff;
+}
+
+.panel-danger.panel-colorful {
+  background-color: #f76c51;
+  border-color: #f76c51;
+  color: #fff;
+}
+
+.panel-primary.panel-colorful {
+  background-color: #5fa2dd;
+  border-color: #5fa2dd;
+  color: #fff;
+}
+
+.panel-info.panel-colorful {
+  background-color: #4ebcda;
+  border-color: #4ebcda;
+  color: #fff;
+}
+
+.panel-body {
+  padding: 25px 20px;
+}
+
+.panel hr {
+  border-color: rgba(0,0,0,0.1);
+}
+
+.mar-btm {
+  margin-bottom: 15px;
+}
+
+h2, .h2 {
+  font-size: 28px;
+}
+
+.small, small {
+  font-size: 85%;
+}
+
+.text-sm {
+  font-size: .9em;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+/* Burdan itibaren bilet sayıları için olan kart grubu için css ayarları */
+
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+}
+
+
+.cardticket {
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardticket .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+
